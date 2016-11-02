@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width">
+	<title>todos</title>
+<!--	<link rel="stylesheet" type="text/css" href="css/base.css"/>-->
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script src="js/jquery.js"></script>
+	<script src="js/index.js"></script>
+	
+	<script>
+		var arr=[{a:2,b:3},{a:4,b:3},{a:5,b:1}];
+		var newarr=[];
+		for(var i=0;i<arr.length;i++){		
+			if(arr[i].b!==3){
+				newarr.push(arr[i]);
+			}
+		}
+		arr=newarr;
+		console.log(arr);
+	</script>
+</head>
+<body>
+	<div class="head">
+		<div class="headzuo iconfont icon-heng"></div>
+		<span class="headzi">TODO</span>
+		<div class="headyou iconfont icon-dian">
+			<div class="set">
+				settings
+			</div>
+		</div>
+	</div>
+	<div class="shuru">
+		<input type="text" />
+	</div>
+	
+	<ul>
+		<li class="done">
+			<div class="content">吃饭</div>
+			<div class="small"></div>
+			<div class="small2">✔</div>
+			<div class="delete">－</div>
+		</li>
+		<li class="done">
+			<div class="content">吃饭</div>
+			<div class="small"></div>
+			<div class="delete">－</div>
+		</li>
+		<li class="done">
+			<div class="content">吃饭</div>
+			<div class="small"></div>
+			<div class="delete">－</div>
+		</li>
+		
+	</ul>
+	
+	<!--<div class="footer">
+		<div id="all" data-role="all" class="active">所有</div>
+		<div id="remind" data-role="remind">未完成</div>
+		<div id="completed" data-role="completed">已完成</div>
+	</div>-->
+	
+	<div class="yuan">＋</div>
+</body>
+</html>

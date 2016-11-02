@@ -1,0 +1,268 @@
+@charset "UTF-8";
+/*去掉标签的默认样式*/
+body, h1, h2, h3, h4, h5, h6, p, pre, ol, ul, li, form, input, textarea, dl, dt, dd, span {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #fff;
+}
+
+* {
+  font-family: "Microsoft YaHei",sans-serif;
+  box-sizing: border-box;
+  position: relative;
+}
+
+img {
+  border: none;
+}
+
+/*内宽*/
+/*图片路径*/
+/*调试块*/
+/*上下居中*/
+/*左右居中*/
+/*居中*/
+/*建盒子*/
+/*正方形*/
+/*圆*/
+/*图片居中*/
+html {
+  font-size: 100px;
+}
+
+body {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 42.66667px;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 48px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 380px) {
+  html {
+    font-size: 50.66667px;
+  }
+}
+
+@media screen and (min-width: 384px) {
+  html {
+    font-size: 51.2px;
+  }
+}
+
+@media screen and (min-width: 412px) {
+  html {
+    font-size: 54.93333px;
+  }
+}
+
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 55.2px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 80px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 102.4px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 106.66667px;
+  }
+}
+
+@font-face {
+  font-family: "iconfont";
+  src: url("iconfont.eot?t=1478054136962");
+  /* IE9*/
+  src: url("iconfont.eot?t=1478054136962#iefix") format("embedded-opentype"), url("iconfont.woff?t=1478054136962") format("woff"), url("iconfont.ttf?t=1478054136962") format("truetype"), url("iconfont.svg?t=1478054136962#iconfont") format("svg");
+  /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-heng:before {
+  content: "\e613";
+}
+
+.icon-dian:before {
+  content: "\e699";
+}
+
+body {
+  background: #fff;
+  overflow: hidden;
+}
+
+.head {
+  width: 100%;
+  height: 1.1rem;
+  padding: 0.3rem;
+  background: #3d51b4;
+}
+
+.head .headzuo {
+  font-size: 1.4em;
+  color: #fff;
+  float: left;
+  padding-right: 0.3rem;
+}
+
+.head .headzi {
+  font-size: 1.4em;
+  color: #fff;
+  float: left;
+  padding-left: 0.3rem;
+}
+
+.head .headyou {
+  font-size: 1.4em;
+  color: #fff;
+  float: right;
+}
+
+.head .headyou .set {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 4rem;
+  height: 0.8rem;
+  background: #fff;
+  padding-left: 0.4rem;
+  color: #000;
+  font-size: 0.3rem;
+  line-height: 0.9rem;
+  box-shadow: 0.01rem 0.01rem 0.01rem rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.head .headyou:hover .set {
+  display: block;
+}
+
+.shuru {
+  width: 80%;
+  height: 1rem;
+  margin: 0.2rem auto;
+  padding: 0.2rem;
+  background: #fff;
+  border: 1px solid blue;
+}
+
+.shuru input {
+  outline-style: none;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.yuan {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 0.3rem;
+  right: 0.2rem;
+  background: #4baf4f;
+  font-size: 0.8rem;
+  color: #fff;
+  text-align: center;
+  line-height: 0.9rem;
+}
+
+ul {
+  width: 100%;
+  margin-top: 0.2rem;
+}
+
+ul li {
+  padding: 0 1.3rem;
+  background: #fff;
+  height: 1rem;
+  margin-bottom: 0.2rem;
+  border-bottom: 1px solid #ebebeb;
+  line-height: 0.9rem;
+}
+
+@keyframes active {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(120%);
+    opacity: 0;
+  }
+}
+
+ul .ani-delete {
+  animation: active .8s ease  1;
+}
+
+ul li.done .small {
+  position: absolute;
+  left: 0.6rem;
+  top: 0.3rem;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background: green;
+}
+
+ul li.done:hover .small {
+  background: #ff402e;
+}
+
+ul .delete {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0.3rem;
+  right: 0.7rem;
+  background: red;
+  font-size: 0.4rem;
+  color: #fff;
+  text-align: center;
+  line-height: 0.4rem;
+}
