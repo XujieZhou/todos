@@ -49,16 +49,19 @@ $(function(){
 			$(this).remove().dequeue();
 		})
 	})
-//	ul.on("touchend","li",function  (e) {
-//		var end=e.originalEvent.changedTouches[0].clientX;
-//		if(end-start>50){
-//			arr.splice($(this).index(),1);
-//			localStorage.todos=JSON.stringify(arr);
-//			$(this).addClass("ani-delete").delay(800).queue(function  () {
-//				$(this).remove().dequeue();
-//			});
-//		}
-//	})
+	ul.on("touchend","li",function  (e) {
+		var end=e.originalEvent.changedTouches[0].clientX;
+		if(end-startpos>50){
+			var aa=$(this).closest('li');
+			var index=aa.index();
+			todos.splice(index,1);
+			localStorage.todos=JSON.stringify(todos);
+			aa.addClass('ani-delete');
+			aa.delay(800).queue(function(){
+				$(this).remove().dequeue();
+		})
+		}
+	})
 	ul.on("touchstart","li",function  (e) {
 		start=e.originalEvent.changedTouches[0].clientX;
 	})
