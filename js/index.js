@@ -67,6 +67,26 @@ $(function(){
 	})
 	
 	
+//	var qc=$("#qc");
+//  qc.on("touchend",function(){
+//  	 	$(".done").each(function(i){
+//  	 		
+//	 		$(this).delay(i*80).queue(function(){
+//				$(this).addClass('ani-delete').dequeue();
+//			}).delay(800).queue(function(){
+//				$(this).remove().dequeue();
+//			})	
+//	    	 	})
+//  	 	var newarr=[];
+//  	 	for(var i=0; i<todos.length; i++){
+//  	 		if(todos[i].state===0){
+//  	 			newarr.push(todos[i]);
+//  	 		}
+//  	 	}
+//  	 	todos=newarr;
+//  	 	localStorage.todos=JSON.stringify(todos);
+//  })
+	
 function render(){
 	ul.empty();
 	for(var i=0;i<todos.length;i++){
@@ -75,8 +95,22 @@ function render(){
 	}
 }
 
-	
-	
+
+
+$(".set div").on("touchend",function(){
+	$(".set div").removeClass();
+	$(this).addClass("active");
+ 	ul.find("li").show();
+ 	if($(this).attr("data-role")=="completed"){
+ 		ul.find("li:not('.done')").hide();
+ 	}
+    if($(this).attr("data-role")=="remind"){
+ 		ul.find("li.done").hide();
+ 	}
+})
+
+
+    
 	
 	
 	
